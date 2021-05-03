@@ -12,11 +12,16 @@
     "react-scripts": "4.0.3",
     "web-vitals": "^1.1.1"
   },
+  "engines": {
+    "node": ">=12.0.0"
+  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server",
+    "eject": "react-scripts eject",
+    "eslint": "eslint --ext .jsx --ext .js src/",
+    "test": "npm run eslint && npm run test.jest",
+    "test.jest": "jest"
   },
   "eslintConfig": {
     "extends": [
@@ -37,10 +42,17 @@
     ]
   },
   "devDependencies": {
+    "@babel/core": "7.12.17",
+    "@babel/preset-env": "7.12.17",
+    "@babel/preset-react": "7.12.13",
+    "babel-loader": "8.2.2",
     "eslint": "7.18.0",
     "eslint-config-htmlacademy": "2.1.0",
     "eslint-plugin-react": "7.22.0",
-    "jest": "26.6.3"
+    "jest": "26.6.3",
+    "webpack": "4.46.0",
+    "webpack-cli": "3.3.12",
+    "webpack-dev-server": "3.11.2"
   },
   "jest": {
     "moduleNameMapper": {
