@@ -1,17 +1,38 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import {configureStore} from '@reduxjs/toolkit';
+import {createAPI} from './services/api';
+import {Provider} from 'react-redux';
+import {Router as BrowserRouter} from 'react-router-dom';
+import App from './components/app/app';
+import rootReducer from './store/root-reducer';
+import {requireAuthorization} from './store/actions';
+import {checkAuth} from './store/api-actions';
+import {AuthorizationStatus} from './const';
+import {redirect} from './store/middlewares/redirect';
+import browserHistory from './browser-history';
 
-ReactDOM.render(
-  <React.StrictMod>
-    <App />
-  </React.StrictMod>,
-  document.getElementById('root')
+const api = createAPI(
+  () => store.dispatch(requireAuthorization(AuthorizationStatus.NO_AUTH))
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const store = configureStore({
+  reducer: rootReducer,
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      thunk: {
+        extraArgument: api
+      },
+    }).concat(redirect)
+});
+
+store.dispatch(checkAuth());
+
+ReactDOM.render(
+  <Provider store={store}>
+    <BrowserRouter history={browserHistory}>
+      <App />
+    </BrowserRouter>
+  </Provider>,
+  document.querySelector(`#root`)
+);
