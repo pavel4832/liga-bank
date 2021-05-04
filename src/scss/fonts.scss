@@ -33,3 +33,8 @@
   font-style: normal;
   font-display: swap;
 }
+
+@mixin font($name) {
+  font-family: $name, "Arial", sans-serif;
+  font-style: normal;
+}
