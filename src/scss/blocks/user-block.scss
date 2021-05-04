@@ -1,0 +1,14 @@
+.user-block {
+  display: flex;
+  align-items: center;
+  margin-top: 6px;
+}
+
+.user-block__icon {
+  margin-right: 11px;
+}
+
+.user-block__link {
+  letter-spacing: -0.22px;
+  color: $black;
+}

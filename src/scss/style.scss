@@ -1,6 +1,10 @@
+/*Main styles*/
 @import "fonts";
 @import "colors";
-
-body {
-  @include font(Robobto-Bold);
-}
+@import "global";
+@import "blocks/page-header";
+@import "blocks/logo";
+@import "blocks/page-menu";
+@import "blocks/user-block";
+@import "blocks/main-header";
+@import "blocks/button";

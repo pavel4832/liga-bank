@@ -1,0 +1,68 @@
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: $blue;
+  padding-top: 102px;
+  padding-left: 268px;
+  padding-right: 223px;
+  padding-bottom: 70px;
+  color: $white;
+  background: linear-gradient(180.24deg, rgba(32, 39, 179, 0) 36.31%, #2027B3 99.79%),
+              linear-gradient(183.47deg, rgba(56, 65, 255, 0) 66.3%, #3841FF 97.14%),
+              linear-gradient(183.47deg, rgba(56, 65, 255, 0) 27.26%, #3841FF 97.14%),
+              linear-gradient(180.24deg, rgba(32, 39, 179, 0) 32.89%, #2027B3 99.79%);
+  background-size: 150px 100%, 150px 269px, 270px 269px, 298px 100%;
+  background-repeat: no-repeat;
+  background-position: 0 100%, 150px 100%, 798px 100%, 100% 100%;
+  background-color: $blue;
+}
+
+.main-header__title {
+  margin: 0;
+  font-size: 54px;
+  line-height: 63.28px;
+}
+
+.main-header__text {
+  margin-top: 8px;
+  margin-bottom: 0;
+  font-size: 22px;
+  line-height: 25.78px;
+}
+
+.main-header__button {
+  width: 234px;
+  margin-top: 34px;
+  font-size: 18px;
+  line-height: 53px;
+}
+
+.main-header__image {
+  position: relative;
+  padding: 0;
+  min-width: 335px;
+  min-height: 228px;
+}
+
+.main-header__card {
+  display: block;
+  min-width: 335px;
+  min-height: 228px;
+  padding: 0;
+  background-color: transparent;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  &.main-header__card--white {
+    position: absolute;
+    right: 0;
+    top: -41px;
+    background-image: url("../img/white-card.png");
+  }
+  &.main-header__card--black {
+    position: absolute;
+    left: -110px;
+    bottom: -17px;
+    background-image: url("../img/black-card.png");
+  }
+}

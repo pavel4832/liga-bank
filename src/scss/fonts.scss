@@ -1,5 +1,6 @@
+/*Fonts*/
 @font-face {
-  font-family: "Robobto-Regular";
+  font-family: "Roboto-Regular";
   src: url("../fonts/roboto-regular.woff2") format("woff2"),
   url("../fonts/roboto-regular.woff") format("woff");
   font-weight: 400;
@@ -8,7 +9,7 @@
 }
 
 @font-face {
-  font-family: "Robobto-Medium";
+  font-family: "Roboto-Medium";
   src: url("../fonts/roboto-medium.woff2") format("woff2"),
   url("../fonts/roboto-medium.woff") format("woff");
   font-weight: 500;
@@ -17,7 +18,7 @@
 }
 
 @font-face {
-  font-family: "Robobto-Bold";
+  font-family: "Roboto-Bold";
   src: url("../fonts/roboto-bold.woff2") format("woff2"),
   url("../fonts/roboto-bold.woff") format("woff");
   font-weight: 700;
@@ -34,7 +35,7 @@
   font-display: swap;
 }
 
-@mixin font($name) {
-  font-family: $name, "Arial", sans-serif;
-  font-style: normal;
-}
+$roboRegular: "Roboto-Regular", "Arial", sans-serif;
+$roboMedium: "Roboto-Medium", "Arial", sans-serif;
+$roboBold: "Roboto-Bold", "Arial", sans-serif;
+$workBold: "Work-Bold", "Arial", sans-serif;
