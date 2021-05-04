@@ -1,0 +1,129 @@
+.converter {
+  padding-top: 46px;
+  padding-left: 98px;
+  padding-right: 98px;
+  padding-bottom: 100px;
+}
+
+.converter-title {
+  margin: 0;
+  font-family: $roboBold;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 41px;
+  line-height: 57.4px;
+  color: $black;
+}
+
+.converter-form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  fieldset {
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+}
+
+.converter-form__legend {
+  margin: 0;
+  padding: 0;
+  font-family: $roboMedium;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 30.8px;
+  color: $black;
+}
+
+.convert-form__field {
+  position: relative;
+  display: flex;
+  margin-top: 22px;
+  &::after {
+    content: url("../img/down-arrow-icon.svg");
+    position: absolute;
+    display: inline-block;
+    width: 18px;
+    height: 11px;
+    right: 16px;
+    top: 22px;
+    color: $black;
+    z-index: 10;
+  }
+}
+
+.converter-form__input {
+  width: 390px;
+  height: 60px;
+  margin-right: 15px;
+  font-family: $roboMedium;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 33.6px;
+  color: $black;
+  text-align: center;
+  border: 1px solid $black;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.converter-form__select {
+  appearance: none;
+  padding-left: 16px;
+  padding-right: 43px;
+  font-family: $roboRegular;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 42px;
+  border: 1px solid $black;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.converter-form__image {
+  display: flex;
+  flex-direction: column;
+  margin-top: 61px;
+}
+
+.converter-form__icon {
+  display: inline-block;
+  width: 53px;
+  height: 18px;
+  &.converter-form__icon--left {
+    background-image: url("../img/left-arrow-icon.svg");
+  }
+  &.converter-form__icon--right {
+    background-image: url("../img/right-arrow-icon.svg");
+  }
+}
+
+.converter-form__calendar {
+  position: relative;
+  margin-top: 85px;
+  &::after {
+    content: url("../img/calendar-icon.svg");
+    position: absolute;
+    display: inline-block;
+    width: 39px;
+    height: 42px;
+    right: 36px;
+    top: 6px;
+    z-index: 10;
+  }
+}
+
+.converter-form__submit {
+  width: 382px;
+  height: 60px;
+  margin-top: 85px;
+  background-color: $blue;
+  color: $white;
+  font-size: 18px;
+  line-height: 60px;
+}

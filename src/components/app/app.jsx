@@ -50,6 +50,164 @@ const App = () => {
               <span className="main-header__card main-header__card--black"></span>
             </div>
           </section>
+          <section className="page-main__converter converter">
+            <h2 className="converter-title">Конвертер валют</h2>
+            <form action="#" className="converter-form">
+              <fieldset className="converter-form__have">
+                <legend className="converter-form__legend">У меня есть</legend>
+                <div className="convert-form__field">
+                  <input type="number" className="converter-form__input"/>
+                  <select name="currancy" className="converter-form__select">
+                    <option value="RUB" className="converter-form__choice">RUB</option>
+                    <option value="USD" className="converter-form__choice">USD</option>
+                    <option value="EUR" className="converter-form__choice">EUR</option>
+                    <option value="GBR" className="converter-form__choice">GBR</option>
+                    <option value="CNY" className="converter-form__choice">CNY</option>
+                  </select>
+                </div>
+              </fieldset>
+              <div className="converter-form__image">
+                <span className="converter-form__icon converter-form__icon--left"></span>
+                <span className="converter-form__icon converter-form__icon--right"></span>
+              </div>
+              <fieldset className="converter-form__get">
+                <legend className="converter-form__legend">Хочу приобрести</legend>
+                <div className="convert-form__field">
+                  <input type="number" className="converter-form__input"/>
+                  <select name="currancy" className="converter-form__select">
+                    <option value="USD" className="converter-form__choice">USD</option>
+                    <option value="RUB" className="converter-form__choice">RUB</option>
+                    <option value="EUR" className="converter-form__choice">EUR</option>
+                    <option value="GBR" className="converter-form__choice">GBR</option>
+                    <option value="CNY" className="converter-form__choice">CNY</option>
+                  </select>
+                </div>
+              </fieldset>
+              <div className="converter-form__calendar">
+                <input type="text" className="converter-form__input"/>
+              </div>
+              <button type="submit" className="converter-form__submit button">Сохранить результат</button>
+            </form>
+          </section>
+          <section className="page-main__history history-data">
+            <div className="history-data__wrapper">
+              <h2 className="history-data__title">История конвертация</h2>
+              <div className="history-data__board">
+                <div className="history-data__column history-data__column--left">
+                  <ul className="history-data__list">
+                    <li className="history-data__item">
+                      <p className="history-data__date">25.11.2020</p>
+                      <p className="history-data__change">1000
+                        <span className="history-data__currency">RUB</span>
+                      </p>
+                      <span className="history-data__icon"></span>
+                      <p className="history-data__got">13,1234
+                        <span className="history-data__currency">USD</span>
+                      </p>
+                    </li>
+                    <li className="history-data__item">
+                      <p className="history-data__date">25.11.2020</p>
+                      <p className="history-data__change">1000
+                        <span className="history-data__currency">RUB</span>
+                      </p>
+                      <span className="history-data__icon"></span>
+                      <p className="history-data__got">13,1234
+                        <span className="history-data__currency">USD</span>
+                      </p>
+                    </li>
+                    <li className="history-data__item">
+                      <p className="history-data__date">25.11.2020</p>
+                      <p className="history-data__change">1000
+                        <span className="history-data__currency">RUB</span>
+                      </p>
+                      <span className="history-data__icon"></span>
+                      <p className="history-data__got">13,1234
+                        <span className="history-data__currency">USD</span>
+                      </p>
+                    </li>
+                    <li className="history-data__item">
+                      <p className="history-data__date">25.11.2020</p>
+                      <p className="history-data__change">1000
+                        <span className="history-data__currency">RUB</span>
+                      </p>
+                      <span className="history-data__icon"></span>
+                      <p className="history-data__got">13,1234
+                        <span className="history-data__currency">USD</span>
+                      </p>
+                    </li>
+                    <li className="history-data__item">
+                      <p className="history-data__date">25.11.2020</p>
+                      <p className="history-data__change">1000
+                        <span className="history-data__currency">RUB</span>
+                      </p>
+                      <span className="history-data__icon"></span>
+                      <p className="history-data__got">13,1234
+                        <span className="history-data__currency">USD</span>
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+                <span className="history-data__line"></span>
+                <div className="history-data__column history-data__column--right">
+                  <ul className="history-data__list">
+                    <li className="history-data__item">
+                      <p className="history-data__date">25.11.2020</p>
+                      <p className="history-data__change">1000
+                        <span className="history-data__currency">RUB</span>
+                      </p>
+                      <span className="history-data__icon"></span>
+                      <p className="history-data__got">13,1234
+                        <span className="history-data__currency">USD</span>
+                      </p>
+                    </li>
+                    <li className="history-data__item">
+                      <p className="history-data__date">25.11.2020</p>
+                      <p className="history-data__change">1000
+                        <span className="history-data__currency">RUB</span>
+                      </p>
+                      <span className="history-data__icon"></span>
+                      <p className="history-data__got">13,1234
+                        <span className="history-data__currency">USD</span>
+                      </p>
+                    </li>
+                    <li className="history-data__item">
+                      <p className="history-data__date">25.11.2020</p>
+                      <p className="history-data__change">1000
+                        <span className="history-data__currency">RUB</span>
+                      </p>
+                      <span className="history-data__icon"></span>
+                      <p className="history-data__got">13,1234
+                        <span className="history-data__currency">USD</span>
+                      </p>
+                    </li>
+                    <li className="history-data__item">
+                      <p className="history-data__date">25.11.2020</p>
+                      <p className="history-data__change">1000
+                        <span className="history-data__currency">RUB</span>
+                      </p>
+                      <span className="history-data__icon"></span>
+                      <p className="history-data__got">13,1234
+                        <span className="history-data__currency">USD</span>
+                      </p>
+                    </li>
+                    <li className="history-data__item">
+                      <p className="history-data__date">25.11.2020</p>
+                      <p className="history-data__change">1000
+                        <span className="history-data__currency">RUB</span>
+                      </p>
+                      <span className="history-data__icon"></span>
+                      <p className="history-data__got">13,1234
+                        <span className="history-data__currency">USD</span>
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+                <button className="history-data__reset button">Очистить историю</button>
+              </div>
+            </div>
+
+
+          </section>
         </div>
       </main>
     </div>
