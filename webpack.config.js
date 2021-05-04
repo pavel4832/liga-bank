@@ -1,6 +1,9 @@
 const path = require('path');
+const miniCss = require('mini-css-extract-plugin');
+const minify = require('optimize-css-assets-webpack-plugin');
 
 module.exports = {
+  mode: 'development',
   entry: './src/index.js',
   output: {
     filename: 'bundle.js',
@@ -12,6 +15,10 @@ module.exports = {
     port: 1337,
     historyApiFallback: true,
   },
+  resolve: {
+    extensions: ['.js', '.jsx']
+  },
+  devtool: 'source-map',
   module: {
     rules: [
       {
@@ -19,12 +26,27 @@ module.exports = {
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
-        },
+        }
+      },
+      {
+        test: /\.(s*)css$/,
+        exclude: /node_modules/,
+        use: [
+          miniCss.loader,
+          'css-loader?url=false',
+          'sass-loader',
+        ]
       }
+    ]
+  },
+  optimization: {
+    minimizer: [
+      new minify({})
     ],
   },
-  resolve: {
-    extensions: ['.js', '.jsx']
-  },
-  devtool: 'source-map',
+  plugins: [
+    new miniCss({
+      filename: './css/style.css',
+    }),
+  ]
 };
