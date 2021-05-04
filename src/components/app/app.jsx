@@ -7,9 +7,13 @@ const App = () => {
       <header className="page-header">
         <div className="container">
           <div className="page-header__wrapper">
-            <div className="logo">
-              <img src="./img/logo-icon.svg" alt="Лого" className="logo__image" width="28" height="25"/>
-              <p className="logo__text">ЛИГА Банк</p>
+            <div className="page-header__logo logo">
+              <a href="" className="logo__link">
+                <div className="logo__wrapper">
+                  <img src="./img/logo-icon.svg" alt="Лого" className="logo__image" width="28" height="25"/>
+                  <p className="logo__text">ЛИГА Банк</p>
+                </div>
+              </a>
             </div>
             <nav className="page-menu">
               <ul className="page-menu__list">
@@ -205,13 +209,83 @@ const App = () => {
                 <button className="history-data__reset button">Очистить историю</button>
               </div>
             </div>
-
-
           </section>
         </div>
       </main>
+      <footer className="page-footer">
+        <div className="container">
+          <div className="page-footer__wrapper">
+            <div className="page-footer__address address">
+              <div className="address__logo logo">
+                <a href="" className="logo__link">
+                  <div className="logo__wrapper">
+                    <img src="./img/logo-icon.svg" alt="Лого" className="logo__image" width="28" height="25"/>
+                    <p className="logo__text">ЛИГА Банк</p>
+                  </div>
+                </a>
+              </div>
+              <p className="address__text">
+                150015, г. Москва, ул. Московская, д. 32<br /> Генеральная лицензия Банка России №1050<br /> Ⓒ Лига Банк, 2019
+              </p>
+            </div>
+            <div className="page-footer__menu">
+              <ul className="page-footer__list">
+                <li className="page-footer__item">
+                  <a href="" className="page-footer__link">Услуги</a>
+                </li>
+                <li className="page-footer__item">
+                  <a href="" className="page-footer__link">Рассчитать кредит</a>
+                </li>
+                <li className="page-footer__item">
+                  <a href="" className="page-footer__link">Контакты</a>
+                </li>
+                <li className="page-footer__item">
+                  <a href="" className="page-footer__link">Задать вопрос</a>
+                </li>
+              </ul>
+            </div>
+            <div className="page-footer__cellphone phone">
+              <p className="phone__number">
+                <a href="tel:*0904" className="phone__link">*0904</a>
+              </p>
+              <p className="phone__info">Бесплатно для абонентов<br /> МТС, Билайн, Мегафон, Теле2</p>
+            </div>
+            <div className="page-footer__phone phone">
+              <p className="phone__number">
+                <a href="tel:8 800 111 22 33" className="phone__link">8 800 111 22 33</a>
+              </p>
+              <p className="phone__info">Бесплатный для всех<br /> городов России</p>
+            </div>
+            <div className="page-footer__social social">
+              <ul className="social__list">
+                <li className="social__item">
+                  <a href="" className="social__link">
+                    <img src="./img/fb-icon.svg" alt="FB" className="social__icon" width="9" height="16"/>
+                  </a>
+                </li>
+                <li className="social__item">
+                  <a href="" className="social__link">
+                    <img src="./img/inst-icon.svg" alt="Instagram" className="social__icon" width="16" height="16"/>
+                  </a>
+                </li>
+                <li className="social__item">
+                  <a href="" className="social__link">
+                    <img src="./img/twiter-icon.svg" alt="Twiter" className="social__icon" width="16" height="13"/>
+                  </a>
+                </li>
+                <li className="social__item">
+                  <a href="" className="social__link">
+                    <img src="./img/youtube-icon.svg" alt="Youtube" className="social__icon" width="16" height="13"/>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </footer>
     </div>
-  )
+  );
 };
 
 export default App;
