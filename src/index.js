@@ -1,4 +1,4 @@
-import './scss/style.scss'
+import './scss/style.scss';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {configureStore} from '@reduxjs/toolkit';
@@ -8,13 +8,12 @@ import {Router as BrowserRouter} from 'react-router-dom';
 import App from './components/app/app';
 import rootReducer from './store/root-reducer';
 import {requireAuthorization} from './store/actions';
-import {checkAuth} from './store/api-actions';
 import {AuthorizationStatus} from './const';
 import {redirect} from './store/middlewares/redirect';
 import browserHistory from './browser-history';
 
 const api = createAPI(
-  () => store.dispatch(requireAuthorization(AuthorizationStatus.NO_AUTH))
+    () => store.dispatch(requireAuthorization(AuthorizationStatus.NO_AUTH))
 );
 
 const store = configureStore({
@@ -27,13 +26,11 @@ const store = configureStore({
     }).concat(redirect)
 });
 
-store.dispatch(checkAuth());
-
 ReactDOM.render(
-  <Provider store={store}>
-    <BrowserRouter history={browserHistory}>
-      <App />
-    </BrowserRouter>
-  </Provider>,
-  document.querySelector(`#root`)
+    <Provider store={store}>
+      <BrowserRouter history={browserHistory}>
+        <App />
+      </BrowserRouter>
+    </Provider>,
+    document.querySelector(`#root`)
 );

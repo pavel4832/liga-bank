@@ -1,11 +1,11 @@
 import {createReducer} from '@reduxjs/toolkit';
-import {requireAuthorization, setLoginError} from '../actions';
+import {requireAuthorization} from '../actions';
 import {AuthorizationStatus} from '../../const';
+import userMock from '../../mock/user';
 
 const initialState = {
   authorizationStatus: AuthorizationStatus.NO_AUTH,
-  isLoginError: false,
-  user: {}
+  user: userMock
 };
 
 const user = createReducer(initialState, (builder) => {
@@ -13,12 +13,6 @@ const user = createReducer(initialState, (builder) => {
     return {
       ...state,
       authorizationStatus: action.payload,
-    };
-  });
-  builder.addCase(setLoginError, (state) => {
-    return {
-      ...state,
-      isLoginError: true,
     };
   });
 });

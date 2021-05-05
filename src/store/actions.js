@@ -1,9 +1,9 @@
 import {createAction} from '@reduxjs/toolkit';
 
 export const ActionType = {
-  CHANGE_CONTENT: `movies/changeContent`,
+  CHANGE_MENU: `data/changeMenu`,
+  REDIRECT_TO_ROUTE: `data/redirectToRoute`,
   REQUIRED_AUTHORIZATION: `user/requiredAuthorization`,
-  SET_LOGIN_ERROR: `user/setLoginError`,
 };
 
 export const requireAuthorization = createAction(ActionType.REQUIRED_AUTHORIZATION, (status) => {
@@ -12,10 +12,14 @@ export const requireAuthorization = createAction(ActionType.REQUIRED_AUTHORIZATI
   };
 });
 
-export const setLoginError = createAction(ActionType.SET_LOGIN_ERROR);
-
-export const changeContent = createAction(ActionType.CHANGE_CONTENT, (newContent) => {
+export const redirectToRoute = createAction(ActionType.REDIRECT_TO_ROUTE, (url) => {
   return {
-    payload: newContent,
+    payload: url,
+  };
+});
+
+export const changeMenu = createAction(ActionType.CHANGE_MENU, (newMenu) => {
+  return {
+    payload: newMenu,
   };
 });
