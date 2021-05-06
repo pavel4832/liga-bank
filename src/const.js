@@ -1,8 +1,13 @@
 export const APIRoute = {
-  RATES: `/rates`,
-  LOGIN: `/login`,
+  RATES: `/api`,
   ERROR: `/error`,
-  LOG_OUT: `/logout`
+};
+
+export const RESULTS_LENGTH = 5;
+
+export const NUMBER = {
+  FOR_FIELD: 2,
+  FOR_RATE: 5
 };
 
 export const AppRoute = {
@@ -25,4 +30,17 @@ export const MENU_TYPE = {
   CONVERTER: `converter`,
   CONTACT: `contact`,
   QUESTIONS: `questions`
+};
+
+export const TIME_FORMAT = {
+  ATTRIBUTE: `D.MM.YYYY`,
+  REQUEST: `YYYY-MM-DD`
+};
+
+export const CURRENCY = {
+  RUB: `RUB`,
+  USD: `USD`,
+  EUR: `EUR`,
+  GBP: `GBP`,
+  CNY: `CNY`
 };

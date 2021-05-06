@@ -29,13 +29,17 @@ module.exports = {
         }
       },
       {
-        test: /\.(s*)css$/,
+        test: /\.(scss)$/,
         exclude: /node_modules/,
         use: [
           miniCss.loader,
           'css-loader?url=false',
           'sass-loader',
         ]
+      },
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader']
       }
     ]
   },
